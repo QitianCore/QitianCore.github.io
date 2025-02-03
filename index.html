@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习社区 - 知行打卡</title>
+    <!-- 引入Bootstrap和Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .community-header {
+            background: linear-gradient(90deg, #4CAF50, #2196F3);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .post-card {
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        .ranking-list li {
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+        .online-user {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">知行打卡社区</a>
+            <div class="d-flex">
+                <a href="#" class="btn btn-light me-2"><i class="fas fa-comments"></i> 消息</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 社区主体 -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- 左侧：帖子列表 -->
+            <div class="col-md-8">
+                <!-- 发帖框 -->
+                <div class="card post-card">
+                    <div class="card-body">
+                        <textarea class="form-control" placeholder="分享你的学习心得..." rows="3"></textarea>
+                        <button class="btn btn-primary mt-2"><i class="fas fa-share"></i> 发布</button>
+                    </div>
+                </div>
+
+                <!-- 帖子示例 -->
+                <div class="card post-card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="user-avatar.png" class="rounded-circle me-2" width="40" alt="用户头像">
+                            <h5 class="mb-0">用户A</h5>
+                            <span class="badge bg-success ms-2"><i class="fas fa-check"></i> 连续打卡7天</span>
+                        </div>
+                        <p>今天完成了Python基础课程，收获满满！</p>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-secondary btn-sm"><i class="fas fa-heart"></i> 点赞 (15)</button>
+                            <button class="btn btn-outline-secondary btn-sm"><i class="fas fa-comment"></i> 评论</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：排行榜和在线用户 -->
+            <div class="col-md-4">
+                <!-- 排行榜 -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <i class="fas fa-trophy me-2"></i> 本周打卡达人
+                    </div>
+                    <ul class="list-group ranking-list">
+                        <li class="list-group-item">🥇 用户A (21次打卡)</li>
+                        <li class="list-group-item">🥈 用户B (18次打卡)</li>
+                        <li class="list-group-item">🥉 用户C (15次打卡)</li>
+                    </ul>
+                </div>
+
+                <!-- 在线用户 -->
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-users me-2"></i> 在线学习伙伴
+                    </div>
+                    <div class="card-body">
+                        <div class="online-user mb-2">
+                            <i class="fas fa-circle text-success"></i>
+                            <span>用户D (正在学习英语)</span>
+                        </div>
+                        <div class="online-user">
+                            <i class="fas fa-circle text-success"></i>
+                            <span>用户E (正在学习编程)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入Bootstrap JS -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
